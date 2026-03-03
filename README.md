@@ -149,24 +149,18 @@ Timestamp(ms),Result,Latitude,Longitude
 ---
 
 
-## Known Limitations
-
-- Hop detection is not currently implemented. The system detects Direct vs Failed only. Hopped detection would require switching the Meshtastic serial module to Proto mode and parsing protobuf packets on the Arduino.
-- GPS_NOT_FIXED results are shown in the debug panel but not plotted on the map.
-- Dots are not saved between sessions — closing Processing clears all plotted points. Consider adding file export if you need persistent logs.
-
----
 
 ## Future Improvements
 
 - [ ] Proto mode serial parsing for hop count detection
-- [ ] Save/load dot data to CSV file from Processing
+- [ ] Save/load dot data to CSV file from Processing as when the sketch is closed we lose all data
 - [ ] Variable dot size based on RSSI
 - [ ] Make more portable by building on RPi
 - [ ] Think about 3D design to make arial position consistant on Sender
 - [ ] There could be two setting for mapping here. Node to node and node to mesh
 - [ ] ditch the button and make it send a ping every 30 secs
 - [ ] Have an LED that lights red for Fail or Green for Success.
+- [ ] Hop detection is not currently visible. The system detects Direct vs Failed only. Hopped detection would require switching the Meshtastic serial module to Proto mode and parsing protobuf packets on the Arduino.
 
 ---
 
